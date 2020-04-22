@@ -1,0 +1,17 @@
+/**
+ * Enregistrement.
+ */
+
+function oetl_register_meta_box() {
+    add_meta_box( 'oetl_photos_datas', "données de la photo", "oetl_display_callback", "attachment" );
+}
+add_action( 'add_meta_boxes', 'oetl_register_meta_box' );
+
+
+/**
+ * Callback.
+ */
+
+function oetl_display_callback( $attachment ) {
+echo "je suis là";
+}
